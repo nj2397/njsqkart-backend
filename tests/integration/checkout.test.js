@@ -52,7 +52,6 @@ describe("Cart routes", () => {
 
       console.log(res.statusCode, "from 55");
 
-      // TODO: CRIO_TASK_MODULE_TEST - Assert if status code is "400 BAD REQUEST"
       //  expect(true).toEqual(false); 
       expect(res.statusCode).toEqual(httpStatus.BAD_REQUEST);
     });
@@ -69,7 +68,6 @@ describe("Cart routes", () => {
         .send();
 
       console.log(res.statusCode, "from 75");
-      // TODO: CRIO_TASK_MODULE_TEST - Assert if status code is 400
       //  expect(true).toEqual(false);
       expect(res.statusCode).toEqual(httpStatus.BAD_REQUEST);
     });
@@ -85,7 +83,6 @@ describe("Cart routes", () => {
         .send();
 
       console.log(res.statusCode, "from 93");
-      // TODO: CRIO_TASK_MODULE_TEST - Assert if status code is 400
       //  expect(true).toEqual(false);
       expect(res.statusCode).toEqual(httpStatus.BAD_REQUEST);
 
@@ -103,10 +100,8 @@ describe("Cart routes", () => {
 
       console.log(res.statusCode, "from line 112");
 
-      // TODO: CRIO_TASK_MODULE_TEST - Assert if status code is 204
       //  expect(true).toEqual(false);
       expect(res.statusCode).toEqual(httpStatus.NO_CONTENT);
-      // TODO: CRIO_TASK_MODULE_TEST - Get the cart for "userOne" and assert if
       // - Cart exists
       // - Length of "cartItems" array is 0
 
