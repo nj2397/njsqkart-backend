@@ -204,7 +204,6 @@ const deleteProductFromCart = async (user, productId) => {
     return savedCart;
 };
 
-// TODO: CRIO_TASK_MODULE_TEST - Implement checkout function
 /**
  * Checkout a users cart.
  * On success, users cart must have no products.
@@ -235,8 +234,6 @@ const checkout = async (user) => {
     return sum += ele.product.cost * ele.quantity;  
   });
 
-  // console.log(user.walletMoney);
-  // console.log(sum, "--sum");
   
   if(sum > user.walletMoney)
     throw new ApiError(httpStatus.BAD_REQUEST, "Insufficient Balance");
@@ -244,7 +241,6 @@ const checkout = async (user) => {
 
   user.walletMoney -= sum;
   await user.save();
-  // console.log(user.walletMoney);
 
   userCart.cartItems = []; 
   await userCart.save();
