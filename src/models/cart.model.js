@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { productSchema } = require('./product.model');
 const config = require("../config/config")
 
-// Defining Cart model
+// Define a Cart model
 
 const cartSchema = mongoose.Schema(
   {
