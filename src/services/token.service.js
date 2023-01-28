@@ -17,7 +17,6 @@ const { tokenTypes } = require("../config/tokens");
  * @returns {string}
  */
 const generateToken = (userId, expires, type, secret = config.jwt.secret) => {
-  // console.log(expires, "from token.service.js, line 20");
   const payload = {
     sub: userId,
     type: type,
@@ -26,7 +25,6 @@ const generateToken = (userId, expires, type, secret = config.jwt.secret) => {
   };
   const options = { expiresIn: expires };
   const jwtToken = jwt.sign(payload, secret, options);
-  // console.log(jwtToken);
   return jwtToken;
 };
 
