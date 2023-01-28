@@ -4,7 +4,6 @@ const catchAsync = require("../utils/catchAsync");
 const { userService } = require("../services");
 const { response } = require("express");
 
-// TODO: CRIO_TASK_MODULE_UNDERSTANDING_BASICS - Implement getUser() function
 /**
  * Get user details
  *  - Use service layer to get User data
@@ -81,6 +80,9 @@ const getUser = catchAsync(async (req, res) => {
     
 });
 
+/**
+ * Set the Address of the particular user
+*/
 
 const setAddress = catchAsync(async (req, res) => {
   const user = await userService.getUserById(req.params.userId);
