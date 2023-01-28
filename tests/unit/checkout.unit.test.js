@@ -27,7 +27,7 @@ describe("Cart test", () => {
 
       const res = cartService.checkout(userOne);
 
-      // TODO: CRIO_TASK_MODULE_TEST - Assert if
+      // Assert if
       /* - ApiError is thrown
        * - the "statusCode" field of response is "404 NOT FOUND"
        *
@@ -49,7 +49,7 @@ describe("Cart test", () => {
 
       const res = cartService.checkout(userOne); //<--await
 
-      // TODO: CRIO_TASK_MODULE_TEST - Assert if
+      // Assert if
       // - ApiError is thrown
       // - the "statusCode" field of response is "400 BAD REQUEST"
       await expect(res).rejects.toThrow(ApiError);     
@@ -70,7 +70,7 @@ describe("Cart test", () => {
 
       const res = cartService.checkout(userTwo);
 
-      // TODO: CRIO_TASK_MODULE_TEST - Assert if
+      // Assert if
       // - ApiError is thrown
       // - the "statusCode" field of response is "400 BAD REQUEST"
       await expect(res).rejects.toThrow(ApiError);     
@@ -90,7 +90,7 @@ describe("Cart test", () => {
 
       const res = cartService.checkout(userOneWithZeroBalance); 
 
-      // TODO: CRIO_TASK_MODULE_TEST - Assert if
+      // Assert if
       // - ApiError is thrown
       // - the "statusCode" field of response is "400 BAD REQUEST"
       await expect(res).rejects.toThrow(ApiError);     
